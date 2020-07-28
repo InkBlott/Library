@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Library</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Styles.css">
+</head>
+
+<body>
+    <h1 class="libTitle">Library</h1>
+    <div class="buttonCnt">
+        <button onclick="openAdd()" class="addBkBtn"> Add book</button>
+    </div>
+
+    <div class="container">
+        <div class="tableHolder" id="theLibTable">
+            <div class="info"> Title</div>
+            <div class="info"> Author</div>
+            <div class="info"> Pages</div>
+            <div class="info"> Read</div>
+            <div class="info"> Delete</div>
+
+            <div class="itemContainer">
+
+            </div>
+
+        </div>
+        <div class='userInput' id='userIn'>
+            <label for="titleF"> Book title:</label>
+            <input type="text" id='titleF'>
+            <label for="authorF"> Author:</label>
+            <input type="text" id='authorF'>
+            <label for="pageF"> Pages:</label>
+            <input type="number" id='pageF' min='1' max='99999'>
+            <button class="addBtn" onclick="addBook()">Add</button>
+        </div>
+    </div>
+    <script src="Library.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBhv8Mj-ko4TsZZzmioXnzP3lig-r3Jj08",
+            authDomain: "aaaaa-3cf02.firebaseapp.com",
+            databaseURL: "https://aaaaa-3cf02.firebaseio.com",
+            projectId: "aaaaa-3cf02",
+            storageBucket: "aaaaa-3cf02.appspot.com",
+            messagingSenderId: "9050801976",
+            appId: "1:9050801976:web:619b5e76cc1fa232e863cd"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+    let database = firebase.database();
+    let ref = database.ref('Books');
+        
+    </script>
+</body>
+
+</html>
