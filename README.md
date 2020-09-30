@@ -1,2 +1,3 @@
 # Library
-Library learning
+
+JavaScript project for library app, firebase not implemented.
