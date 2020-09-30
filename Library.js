@@ -63,14 +63,14 @@ function render() {
         let buttnRead = document.createElement('button');
         buttnRead.innerText = 'unread';
         buttnRead.classList.add('readBtn');
-        buttnRead.id = myLib.length;
+        buttnRead.id = (myLib.length - 1);
         buttnRead.onclick = readStatus;
     
 
         let buttnDel = document.createElement('button');
         buttnDel.innerText = 'delete';
         buttnDel.classList.add('readBtn');
-        buttnDel.id = myLib.length;
+        buttnDel.id = (myLib.length - 1);
         buttnDel.onclick = deleteBook;
 
         x.appendChild(y);
